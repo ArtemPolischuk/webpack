@@ -1,0 +1,62 @@
+<!--{% load static %}-->
+<!--{% load project_env %}-->
+<!--{% load random_number %}-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<!--        <meta name="user" content={{ user_id }}>-->
+<!--        <meta name="company" content={{ company_id }}>-->
+<!--        <meta name="user-language" content={{ language }}>-->
+        <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/png">
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="{% static 'assets/css/fonts.css' %}">
+
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-sham.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-sham.min.js"></script>
+        <![endif]-->
+
+        <title>Morbax HR</title>
+    </head>
+    <body>
+        <noscript>
+            You need to enable JavaScript to run this app. React App
+        </noscript>
+        <div id="content"></div>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjjQmmJsCTunJpCDJBP24QMZamDjwAlQM&libraries=places"async defer>
+       </script>
+        <script src="{% static 'assets/js/d3.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        {% if settings_DEBUG %}
+            <script src="{% static 'build/bundleApp.js' %}?r={% rand %}"></script>
+        {% else %}
+            <script src="{% static 'build/bundleApp.js' %}?r={% rand %}"></script>
+        {% endif %}
+
+        <script>
+            if (window.location.hostname !== 'localhost') {
+                (function(d, w, c) {
+                    w.ChatraID = 'gBBkkF6tE4YTvBb8Z';
+                    var s = d.createElement('script');
+                    w[c] = w[c] || function() {
+                        (w[c].q = w[c].q || []).push(arguments);
+                    };
+                    s.async = true;
+                    s.src = 'https://call.chatra.io/chatra.js';
+                    if (d.head) d.head.appendChild(s);
+                })(document, window, 'Chatra');
+            }
+        </script>
+    </body>
+</html>
